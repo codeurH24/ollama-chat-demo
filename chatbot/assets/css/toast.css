@@ -1,0 +1,99 @@
+/* CSS pour le conteneur du toast */
+.fixed {
+    position: fixed;
+}
+
+.top-4 {
+    top: 1rem;
+}
+
+.right-4 {
+    right: 1rem;
+}
+
+.z-50 {
+    z-index: 50;
+}
+
+/* CSS pour le message toast */
+.transform {
+    transform: translateY(0);
+}
+
+.transition-all {
+    transition: all 0.3s ease-in-out;
+}
+
+.duration-300 {
+    transition-duration: 300ms;
+}
+
+.bg-green-500 {
+    background-color: #1f845a;
+}
+
+.text-white {
+    color: white;
+}
+.text-black {
+    color: black;
+}
+
+.px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.py-3 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+.rounded-lg {
+    border-radius: 0.5rem;
+}
+
+.shadow-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.flex {
+    display: flex;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.ml-4 {
+    margin-left: 1rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.opacity-0 {
+    opacity: 0;
+}
+
+.opacity-100 {
+    opacity: 1;
+}
+
+.translate-y-0 {
+    transform: translateY(0);
+}
+
+.translate-y-2 {
+    transform: translateY(0.5rem);
+}
+
+/* Style pour le bouton de fermeture */
+.hover\:text-gray-200:hover {
+    color: #696969;
+}
+
+#toast-message button {
+    background-color: white;
+}

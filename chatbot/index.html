@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Chatbot Ollama</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/primsjs/prism2.css">
+    <link rel="stylesheet" href="/assets/css/toast.css">
+
+</head>
+
+<body>
+
+    <div class="chat-container">
+        <div class="discussion-block">
+            <div id="old-messages"></div>
+            <div id="messages"></div>
+        </div>
+        <div class="input-block">
+            <textarea id="input"
+                placeholder="Tapez votre message...">Ecrit moi un hello world en code js, css et html</textarea>
+            <div class="controls-message-block">
+                <button onclick="sendMessage()">Envoyer</button>
+                <button onclick="stopMessage()">Stop</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="toast-container" class="fixed top-4 right-4 z-50">
+        <div id="toast-message"
+            class="hidden transform transition-all duration-300 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg flex items-center">
+            <span id="toast-text">Code HTML copié !</span>
+            <button onclick="hideToast()" class="ml-4 text-black hover:text-gray-200">&times;</button>
+        </div>
+    </div>
+
+    <script src="http://localhost:4545/socket.io/socket.io.js"></script>
+    <script>
+        function bankMessage() {
+            const source = document.getElementById('messages');
+            const destination = document.getElementById('old-messages');
+
+            if (source && destination) {
+                const content = source.innerHTML;
+                destination.innerHTML += content;
+                source.innerHTML = '';
+            }
+        }
+    </script>
+    <script src="/assets/formate/HTML/formateHtml.js"></script>
+    <script src="/assets/formate/JS/formateJs.js"></script>
+    <script src="/assets/formate/CSS/formateCss.js"></script>
+    
+    <script src="/assets/js/main.js"></script>
+    
+    <script src="/assets/primsjs/prism2.js"></script>
+    <script src="/assets/js/actions.js"></script>
+    <script src="/assets/js/toast.js"></script>
+    <script src="/assets/js/textareaHeightAuto.js"></script>
+</body>
+</html>

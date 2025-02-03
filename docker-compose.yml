@@ -1,0 +1,14 @@
+services:
+  ollama:
+    #image: node:20
+    build: ./docker_build/ollama
+    container_name: ollama
+    hostname: ollama
+    network_mode: "host"
+    working_dir: /app
+    mem_limit: 26G
+    mem_reservation: 6G
+    volumes:
+      - ./:/app
+      - ./models:/root/.ollama/models
+    # command: tail -f /dev/null
