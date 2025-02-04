@@ -6,4 +6,6 @@ RUN curl https://ollama.ai/install.sh | sh
 
 RUN apt update && apt install -y nano
 
-ENTRYPOINT [ "ollama", "serve" ]
+RUN npm install pm2 -g
+
+ENTRYPOINT [ "/bin/bash", "/app/start.sh" ]
