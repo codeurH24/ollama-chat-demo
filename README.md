@@ -80,7 +80,7 @@ Le chatbot sera maintenant fonctionnel au prochain redémarrage des services Doc
 Pour démarrer le chatbot, il suffit de lancer les services et de se rendre, depuis un navigateur, à l'adresse http://localhost:3000 : .
 
 ```bash
-source allias # Si ce n'est pas déjà fait
+source alias.sh # Si ce n'est pas déjà fait
 up
 ``` 
 
