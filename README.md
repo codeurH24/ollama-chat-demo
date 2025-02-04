@@ -55,6 +55,7 @@ Utiliser 1.5b ou 3b à la place de 7b pour les machines moins puissantes.
 
 ```bash
 npm install
+exit
 ``` 
 
 1.4  **Activer le fonctionnement du chatbot** 
