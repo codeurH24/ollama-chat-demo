@@ -49,12 +49,17 @@ Télécharger le modèle d'intelligence artificielle :
 ollama pull qwen2.5-coder:7b
 ```  
 
-Utiliser 1.5b ou 3b à la place de 7b pour les machines moins puissantes.
+Utiliser 1.5b ou 3b à la place de 7b pour les machines moins puissantes. 
 
+1.3  **Installer le chatbot** 
 
-1.3  **Activer le fonctionnement du chatbot** 
+```bash
+npm install
+``` 
 
-Ouvrir le fichier start.sh et décommentez cette ligne  
+1.4  **Activer le fonctionnement du chatbot** 
+
+Ouvrez le fichier start.sh, décommentez cette ligne et sauvegardez le fichier.
 
 ```bash
 # /bin/bash run-chatbot.sh
