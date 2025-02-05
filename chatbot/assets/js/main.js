@@ -1,11 +1,5 @@
 const socket = io('http://localhost:4545');
 
-function stopMessage() {
-    socket.emit('stop-response');
-}
-
-
-
 const messagesDiv = document.getElementById('messages');
 const textDecoder = new TextEncoder();
 let prismBlockCounter = 1;
@@ -19,8 +13,6 @@ socket.on('response', (content) => {
     let codeJavascriptEnCour = /```javascript/gm.test(messagesDiv.innerHTML);
     let codeCssEnCour = /```css/gm.test(messagesDiv.innerHTML);
 
-
-
     const data = {
         messagesDiv,
         prismBlockCounter,
@@ -32,7 +24,6 @@ socket.on('response', (content) => {
             bankMessage();
         }
     };
-
 
     if (codeHtmlEnCour) {
         codeHTML += content;
@@ -75,10 +66,3 @@ socket.on('error', (error) => {
     console.error('Erreur:', error);
 });
 
-// Envoi des messages
-function sendMessage() {
-    const input = document.getElementById('input');
-    socket.emit('message', input.value);
-    input.value = '';
-    input.style.height = 'auto';
-}

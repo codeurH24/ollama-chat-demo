@@ -3,10 +3,12 @@
 
 <head>
     <title>Chatbot Ollama</title>
+    <!-- Feuille de style principale pour le site -->
     <link rel="stylesheet" href="/assets/css/style.css">
+    <!-- Styles pour la coloration syntaxique du code avec Prism.js -->
     <link rel="stylesheet" href="/assets/primsjs/prism2.css">
+    <!-- Styles pour les notifications (toast) -->
     <link rel="stylesheet" href="/assets/css/toast.css">
-
 </head>
 
 <body>
@@ -35,27 +37,36 @@
     </div>
 
     <script src="http://localhost:4545/socket.io/socket.io.js"></script>
-    <script>
-        function bankMessage() {
-            const source = document.getElementById('messages');
-            const destination = document.getElementById('old-messages');
 
-            if (source && destination) {
-                const content = source.innerHTML;
-                destination.innerHTML += content;
-                source.innerHTML = '';
-            }
-        }
-    </script>
+    <!-- Scripts pour formater le contenu reçu de l'IA en jolie code source lisible -->
     <script src="/assets/formate/HTML/formateHtml.js"></script>
     <script src="/assets/formate/JS/formateJs.js"></script>
     <script src="/assets/formate/CSS/formateCss.js"></script>
-    
+
+    <!-- Script principal pour le fonctionnement du chatbot -->
     <script src="/assets/js/main.js"></script>
-    
+
+    <!-- Version locale de Prism.js pour éliminer la dépendance externe (CDN) -->
     <script src="/assets/primsjs/prism2.js"></script>
-    <script src="/assets/js/actions.js"></script>
+
+    <!-- 
+        Script pour les événements d'interface utilisateur,
+        comme le défilement automatique vers le bas du fil de discussion 
+    -->
+    <script src="/assets/js/actions.ui.js"></script>
+
+    <!-- 
+        Script pour les actions initiées par l'utilisateur,
+        comme l'envoi de messages 
+    -->
+    <script src="/assets/js/actions.user.js"></script>
+
+    <!-- Fonctions pour afficher des notifications après une action -->
     <script src="/assets/js/toast.js"></script>
+
+    <!-- Ajustement automatique de la hauteur du champ de saisie pour une meilleure ergonomie -->
     <script src="/assets/js/textareaHeightAuto.js"></script>
+
 </body>
+
 </html>
